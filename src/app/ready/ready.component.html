@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div *ngFor="let dado of dados; let i = index; let l = last" >
+        <h1 *ngIf="l == true">
+            <div style="text-align: left;font-size: 30px;">Sumarização: </div>
+            <br>
+            <html style="font-size: 20px;font-family: 'Times New Roman', Times, serif;">{{ dado.resumo }}</html>
+        </h1>
+        <p *ngIf="l == true" style="font-size: 15px;"><a href="{{dado.link}}" target="_blank"> {{dado.link}}</a></p>
+    </div>
+    
+    <br>
+    <button (click)="voltar()">Voltar</button> 
+</body>
+</html>
+

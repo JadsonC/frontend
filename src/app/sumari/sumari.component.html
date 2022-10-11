@@ -1,0 +1,20 @@
+<h1>Resumo de texto</h1>
+
+<br>
+
+<div>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
+    <div>
+      <label for="">Digite a URL</label>
+      <input type="text" formControlName="url" [(ngModel)]="texto.link">
+      <label for=""> Ex: http://www.site.com</label>
+
+    </div>
+    <div>
+      <br>
+      <button [disabled]="!myForm.valid" type="submit" (click)="salvar()">Sumarizar</button>
+      <button (click)="voltar()">Voltar</button>
+      <br>
+    </div>
+  </form>
+</div>
